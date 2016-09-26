@@ -13,17 +13,19 @@ import UIKit
 class TextTimeView: UIView {
     
     @IBInspectable var CharactersPerRow: Int = 11
-    
     @IBInspectable var RowsCount: Int = 10
-    
     @IBInspectable var FontSizeFactor:CGFloat = 0.85
-    let scale:CGFloat = { return UIScreen.main.scale }()
     @IBInspectable var onOpacity: CGFloat = 0.9
-    @IBInspectable var offOpacity: CGFloat = 0.2
-    @IBInspectable var fontName: String = "HelveticaNeue-UltraLight"
+    @IBInspectable var offOpacity: CGFloat = 0.3
+    @IBInspectable var fontName: String = "HelveticaNeue"
     
     func initialize() {
-        let CharSize = CGSize(width: frame.width / scale / CGFloat(CharactersPerRow), height: frame.height / scale / CGFloat(RowsCount))
+
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        let CharSize = CGSize(width: frame.width / CGFloat(CharactersPerRow), height: frame.height / CGFloat(RowsCount))
         let fontSize = ((CharSize.width > CharSize.height) ? CharSize.height : CharSize.width) * FontSizeFactor
         
         let font = UIFont(name: fontName, size: fontSize)
