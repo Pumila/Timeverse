@@ -9,10 +9,20 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>TimeverseKit.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>9F6DEB281D992EBD00F6B349</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9F6DEB421D992EDF00F6B349</key>
 		<dict>
 			<key>primary</key>
 			<true/>
