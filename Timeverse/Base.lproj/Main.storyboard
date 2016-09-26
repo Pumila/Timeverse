@@ -21,7 +21,6 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oud-9R-Oax" customClass="TextTimeView" customModule="TimeverseKit">
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Oud-9R-Oax" secondAttribute="height" multiplier="1:1" id="zIJ-t3-e4I"/>
                                 </constraints>
@@ -33,7 +32,7 @@
                                         <real key="value" value="0.90000000000000002"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="offOpacity">
-                                        <real key="value" value="0.59999999999999998"/>
+                                        <real key="value" value="0.29999999999999999"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="RowsCount">
                                         <integer key="value" value="11"/>
@@ -52,6 +51,9 @@
                             <constraint firstItem="Oud-9R-Oax" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="WDN-1B-MwJ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="textTime" destination="Oud-9R-Oax" id="nR1-rF-RJg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

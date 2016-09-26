@@ -11,7 +11,7 @@ import Foundation
 struct TextTime {
     static let characters = [Character]("ITLISASTIMEACQUARTERDCTWENTYFIVEXHALFBTENFTOPASTERUNINEONESIXTHREEFOURFIVETWOEIGHTELEVENSEVENTWELVETENSEOCLOCK".characters)
     
-    static fileprivate let minutes = [
+    static private let minutes = [
         0: [104, 105, 106, 107, 108, 109],
         5: [28, 29, 30, 31],
         10: [38, 39, 40],
@@ -21,7 +21,7 @@ struct TextTime {
         30: [33, 34, 35, 36]
     ]
     
-    static fileprivate let hours = [
+    static private let hours = [
         1:[55, 56, 57],
         2:[74, 75, 76],
         3:[61, 62, 63, 64, 65],
@@ -36,7 +36,7 @@ struct TextTime {
         12:[93, 94, 95, 96, 97, 98]
     ]
     
-    static fileprivate let words = [
+    static private let words = [
         "IT": [0, 1],
         "IS": [3, 4],
         "A": [11],
@@ -60,7 +60,7 @@ struct TextTime {
         activeChars += words["IT"]!
         activeChars += words["IS"]!
         
-        if(minute == 0) {
+        if (minute == 0) {
             activeChars += hours[hour]!
             activeChars += minutes[0]!
         } else {
@@ -69,6 +69,7 @@ struct TextTime {
             activeChars += words[modifier]!
             activeChars += hours[hour]!
         }
+        
         return activeChars
     }
 }
